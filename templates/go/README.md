@@ -1,6 +1,4 @@
-# Readme
-
-Teste básico de Golang
+# Teste básico de Golang
 
 Listar os dez maiores estados brasileiros em extensão territorial
 
