@@ -2,7 +2,7 @@
 
 ## O que?
 
-Na Code:Nation acreditamos que a melhor forma de aprender uma nova tecnologia, linguagem ou mesmo uma nova carreira é através de desafios práticos. É o chamado "challenge based learning", onde a pessoa é apresentada a desafios práticos que vão ajudá-la a aprender os principais tópicos necessários para a sua evolução.
+Na Code:Nation acreditamos que a melhor forma de aprender uma nova tecnologia, linguagem ou mesmo uma nova carreira é através de desafios práticos. É o chamado _"challenge based learning"_, onde a pessoa é apresentada a desafios práticos que vão ajudá-la a aprender os principais tópicos necessários para a sua evolução.
 
 ## Por que contribuir criando desafios?
 
@@ -241,6 +241,7 @@ Enquanto o primeiro teste possui asserts mais simples (por exemplo: o resultado 
 
 Um dos maiores desafios de um iniciante é conseguir fazer o filtro da enorme quantidade de conteúdo existente e identificar o que é relevante. Para resolvermos este problema sempre elencamos uma lista de posts, livros, documentações, videos, etc, que vão ajudar o desenvolvedor a resolver o desafio. Exemplos:
 
+```
 Introduction to Linux
 https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-1
 Develop a good working knowledge of Linux using both the graphical interface and command line, covering the major Linux distribution families
@@ -252,6 +253,8 @@ An Introduction to API’s
 Pandas From The Ground Up
 https://github.com/brandon-rhodes/pycon-pandas-tutorial
 The typical Pandas user learns one dataframe method at a time, slowly scraping features together through trial and error until they can solve the task in front of them. In this tutorial you will re-learn how to think about dataframes from the ground up, and discover how to select intelligently from their abilities to solve your data processing problems through direct and deliberately-chosen steps
+
+```
 
 ### O template
 
