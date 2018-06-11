@@ -258,11 +258,12 @@ The typical Pandas user learns one dataframe method at a time, slowly scraping f
 
 ### O template
 
-Para facilitar o processo de criação de desafios nós criamos um repositório no Github (link) com templates para as principais linguagens de programação. O repositório é open source por isso você pode colaborar com novos templates.
+Para facilitar o processo de criação de desafios nós criamos um [repositório no Github](https://github.com/thecodenation/desafios/tree/master/templates) com templates para as principais linguagens de programação. O repositório é open source por isso você pode colaborar com novos templates.
 
 ## Como começar?  
 
-Se você tem interesse em nos ajudar com a criação de templates basta abrir uma issue/pull request no repositório de templates.  (link)
+Se você tem interesse em nos ajudar com a criação de templates basta abrir uma issue/pull request no [repositório de templates](https://github.com/thecodenation/desafios/tree/master/templates).
+
 E caso queira criar um desafio por favor entre em contato conosco pelo e-mail (link) ou Twitter/Facebook/Linkedin
 
 
