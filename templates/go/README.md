@@ -2,7 +2,7 @@
 
 Teste básico de Golang
 
-Listas os dez maiores estados brasileiros em extensão territorial
+Listar os dez maiores estados brasileiros em extensão territorial
 
 ## Suite de testes para aprendizado
 
