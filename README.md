@@ -6,22 +6,21 @@ Na Code:Nation acreditamos que a melhor forma de aprender uma nova tecnologia, l
 
 ## Por que contribuir criando desafios?
 
-Lembra quando você iniciou na carreira que está atuando hoje? A angústia de não saber o que estudar primeiro? A lista interminável e assustadora de links, livros, siglas, tudo isso para começar a entender o básico? O quão frustrante isso pode ser? É esse sentimento que queremos mudar com a Code:Nation e você, que já passou por isso, pode nos ajudar a mudar esse cenário. 
-
+Lembra quando você iniciou na carreira que está atuando hoje? A angústia de não saber o que estudar primeiro? A lista interminável e assustadora de links, livros, siglas... Tudo isso para começar a entender o básico? O quão frustrante isso pode ser? É esse sentimento que queremos mudar com a Code:Nation e você, que já passou por isso, pode nos ajudar a mudar esse cenário.
 
 ## Como criar um desafio?
 
-Uma boa forma de iniciar o processo de criação é pensar nos conteúdos que o desafio vai ensinar para o desenvolvedor. Exemplo: 
+Uma boa forma de iniciar o processo de criação é pensando nos conteúdos que o desafio vai ensinar ao(a) desenvolvedor(a). Por exemplo:
 
 > Ao completar este desafio a pessoa terá aprendido o básico de Go, manipulação de slices e como ler um arquivo CSV.
 
 ### O título
 
-Tudo começa com um bom título. Algo que vai chamar a atenção do desenvolvedor(a) e o convencer a clicar no desafio. Exemplos:  *Média do ENEM* , *Melhor nota de matemática do ENEM*, *Os dez maiores estados do Brasil*
+Tudo começa com um bom título. Algo que vai chamar a atenção do(a) desenvolvedor(a) e o(a) convencer a clicar no desafio. Exemplos:  *Média do ENEM* , *Melhor nota de matemática do ENEM*, *Os dez maiores estados do Brasil*
 
 ### A descrição
 
-Aqui é onde descrevemos o desafio em si, qual seus objetivos, quais resultados são esperados. Exemplo:
+Aqui é onde descrevemos o desafio em si - quais são seus objetivos e resultados esperados. Exemplo:
 
 ```
 # Teste básico de Golang
@@ -43,9 +42,9 @@ Para este desafio você precisará do Go versão 1.9 (ou superior) e o gerenciad
 
 ### O teste
 
-Um dos tópicos mais importantes que o desenvolvedor precisa internalizar é o conceito de *TDD* (*Test Driven Development*) e a abordagem da Code:Nation é fortemente baseada nesta crença. 
+Um dos tópicos mais importantes que o(a) desenvolvedor(a) precisa internalizar é o conceito de  *TDD* (*Test Driven Development*) - a abordagem da Code:Nation é fortemente baseada nesta crença.
 
-Quando o desenvolvedor inicia o desafio ele, usando o codenation-cli (link para o video explicando como usar), recebe na sua máquina um diretório com uma estrutura similar a:
+Quando o(a) desenvolvedor(a) inicia o desafio utilizando o codenation-cli (link para o vídeo explicando como usar), recebe na sua máquina um diretório com uma estrutura similar a:
 
 ```
 README.md: detalhes sobre o desafio e o que você precisa instalar na sua máquina para o desenvolvimento
@@ -53,7 +52,7 @@ main.go: é neste arquivo que você deve ser resolvido o desafio
 main_test.go: testes unitários para auxiliá-lo no desenvolvimento. Este arquivo não deve ser alterado!
 ```
 
-O exemplo acima mostra os arquivos de um desafio na linguagem *Go*, mas o mesmo conceito é aplicado a qualquer ambiente: uma suite de testes que o desenvolvedor vai usar para guiar seu desenvolvimento. Neste caso, o *main.go* é um "esqueleto" que o desenvolvedor vai usar para desenvolver. 
+O exemplo acima mostra os arquivos de um desafio na linguagem *Go*, mas o mesmo conceito é aplicado a qualquer ambiente: uma suite de testes que o desenvolvedor usará para guiar seu desenvolvimento. Neste caso, o main.go é um "esqueleto" que o desenvolvedor usará para desenvolver.
 
 Exemplo do esqueleto *main.go*:
 
@@ -96,7 +95,7 @@ func Test10MaioresEstadosDoBrasil(t *testing.T) {
 
 ### O cálculo da nota
 
-Quando o desenvolvedor entender que sua solução está pronta ele pode submetê-la para avaliação. Para isso ele executa o comando  do codenation-cli (link para o video) e um arquivo de testes especial é executado para que a nota seja calculada. A ideia é que o desenvolvedor não possa ver este arquivo, ele é executado apenas no momento da submissão e possui testes mais avançados, para validarmos o seu conhecimento. Exemplo de um arquivo de testes para este fim, o *submit_test.go*:
+Quando o(a) desenvolvedor(a) entender que sua solução está pronta poderá submetê-la para avaliação. Para isso, executará o comando do codenation-cli (link para o video) e um arquivo de testes especial é executado para que a nota seja calculada. A ideia é que o(a) desenvolvedor(a) não possa ver este arquivo - ele é executado apenas no momento da submissão e possui testes mais avançados para validarmos seu conhecimento. Exemplo de um arquivo de testes para este fim, o *submit_test.go*:
 
 ```go
 package main
@@ -121,7 +120,7 @@ Enquanto o primeiro teste possui *asserts* mais simples (por exemplo: o resultad
 
 ### Os conteúdos
 
-Um dos maiores desafios de um iniciante é conseguir fazer o filtro da enorme quantidade de conteúdo existente e identificar o que é relevante. Para resolvermos este problema sempre elencamos uma lista de posts, livros, documentações, videos, etc, que vão ajudar o desenvolvedor a resolver o desafio. Exemplos:
+Um dos maiores desafios de um iniciante é conseguir fazer o filtro da enorme quantidade de conteúdo existente e identificar o que é relevante. Para resolvermos este problema sempre elencamos uma lista de posts, livros, documentações, videos, entre outros materiais, que ajudarão o(a) desenvolvedor(a) a resolver o desafio. Exemplos:
 
 ```
 Introduction to Linux
@@ -142,7 +141,7 @@ Para facilitar o processo de criação de desafios nós criamos um [repositório
 
 Se você tem interesse em nos ajudar com a criação de templates basta abrir uma *issue/pull request* no [repositório de templates](https://github.com/thecodenation/desafios/tree/master/templates).
 
-E caso queira criar um desafio por favor entre em contato conosco pelo e-mail (link) ou Twitter/Facebook/Linkedin
+E, caso queira criar um desafio entre em contato conosco pelo e-mail (link) ou Twitter/Facebook/Linkedin.
 
 
 
