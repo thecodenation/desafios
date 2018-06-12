@@ -54,7 +54,7 @@ O exemplo acima mostra os arquivos de um desafio na linguagem Go, mas o mesmo co
 
 Exemplo do esqueleto main.go:
 
-```
+```go
 package main
 
 import (
@@ -74,7 +74,7 @@ func os10maioresEstadosDoBrasil() ([]string, error) {
 
 Exemplo do conteúdo do arquivo de testes:
 
-```
+```go
 package main
 
 import (
@@ -95,7 +95,7 @@ func Test10MaioresEstadosDoBrasil(t *testing.T) {
 
 Quando o desenvolvedor entender que sua solução está pronta ele pode submetê-la para avaliação. Para isso ele executa o comando  do codenation-cli (link para o video) e um arquivo de testes especial é executado para que a nota seja calculada. A ideia é que o desenvolvedor não possa ver este arquivo, ele é executado apenas no momento da submissão e possui testes mais avançados, para validarmos o conhecimento. Exemplo de um arquivo de testes para este fim, o submit_test.go:
 
-```
+```go
 package main
 
 import (
