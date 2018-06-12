@@ -22,19 +22,21 @@ Tudo começa com um bom título. Algo que vai chamar a atenção do desenvolvedo
 Aqui é onde descrevemos o desafio em si, qual seus objetivos, quais resultados são esperados. Exemplo:
 
 ```
-Para este desafio você precisará de python 3.6 (ou superior) e a biblioteca pandas. Para instalar as dependências, você pode utilizar o arquivo requirements.txt presente neste diretório.
+# Teste básico de Golang
 
-Utilizando a função pd.read_csv, carregue o arquivo train.csv para um DataFrame do pandas mantendo os valores como str (dica: argumento dtype em pd.read_csv). A saída da sua função deverá ser um pd.DataFrame de tamanho (2,2) cujas linhas são as duas primeiras de train.csv e as colunas "NU_INSCRICAO", "NU_IDADE".
+## Objetivo
 
-Calcule a média da idade dos alunos (dica: utilze .astype para converter o tipo da coluna)
+Listar os dez maiores estados brasileiros em extensão territorial
 
-Normalize a coluna "NU_IDADE" removendo a média e dividindo todos os valores pelo desvio padrão da mesma.
+## Requisitos
 
-Calcule a média das notas de matemática (coluna "NU_NOTA_MT") para cada valor em "NO_MUNICIPIO_ESC". Garanta que o resultado final tenha apenas os 10 municipios com maior média (dica: .groupby e .nlargest)
+Para este desafio você precisará do Go versão 1.9 (ou superior) e o gerenciador de dependências dep. Para instalar as dependências, você pode utilizar os comandos abaixo:
 
-Converta o tipo das colunas "NU_NOTA_CN", "NU_NOTA_CH", "NU_NOTA_LC", "NU_NOTA_MT" e "NU_NOTA_REDACAO" para float. Crie uma coluna nova "NU_NOTA_MEDIA" no dataframe cujos valores são a média das colunas anteriores. Caso exista valores faltantes (NaN) preencha com zeros utilizando a função .fillna.
+    go get -u github.com/golang/dep/cmd/dep
+    cd ~/codenation/golang-1
+    dep ensure
 
-Utilize a função "groupby" para contar a quantidade de alunos por idade.
+
 ```
 
 ### O teste
@@ -44,198 +46,75 @@ Quando o desenvolvedor inicia o desafio ele, usando o codenation-cli (link para 
 
 ```
 README.md: detalhes sobre o desafio e o que você precisa instalar na sua máquina para o desenvolvimento
-main.py: é neste arquivo que você deve resolver o desafio
-main_test.py: testes unitários para auxiliá-lo no desenvolvimento. Você não deve alterar este arquivo!
+main.go: é neste arquivo que você deve resolver o desafio
+main_test.go: testes unitários para auxiliá-lo no desenvolvimento. Você não deve alterar este arquivo!
 ```
 
-O exemplo acima mostra os arquivos de um desafio na linguagem Python, mas o mesmo conceito é aplicado a qualquer ambiente: uma suite de testes que o desenvolvedor vai usar para guiar seu desenvolvimento. Neste caso, o main.py é um "esqueleto" que o desenvolvedor vai usar para desenvolver. 
+O exemplo acima mostra os arquivos de um desafio na linguagem Go, mas o mesmo conceito é aplicado a qualquer ambiente: uma suite de testes que o desenvolvedor vai usar para guiar seu desenvolvimento. Neste caso, o main.go é um "esqueleto" que o desenvolvedor vai usar para desenvolver. 
+
+Exemplo do esqueleto main.go:
+
+```
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+}
+
+func os10maioresEstadosDoBrasil() ([]string, error) {
+	var data []string
+	return data, fmt.Errorf("Not implemented")
+}
+
+```
 
 Exemplo do conteúdo do arquivo de testes:
 
 ```
-import pandas as pd
-from main import (
-    part_1,
-    part_2,
-    part_3,
-    part_4,
-    part_5,
-    part_6,
-    part_7,
-    part_8,
-    part_9,
-    part_10,
+package main
+
+import (
+	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-
-def test_part_1():
-    df = part_1()
-    assert isinstance(df, pd.DataFrame)
-    assert df.shape == (2,2)
-    assert set(df.columns) == set(["NU_INSCRICAO", "NU_IDADE"])
-
-def test_part_2():
-    assert isinstance(part_2(), float)
-
-def test_part_3():
-    s = part_3()
-    assert isinstance(s, pd.Series)
-    assert s.name == "NU_IDADE"
-    assert s.dtype == float
-
-def test_part_4():
-    s = part_4()
-    assert isinstance(s, pd.Series)
-    assert s.name == "NU_NOTA_MT"
-    assert s.size == 10
-
-def test_part_5():
-    columns = [
-        'NU_NOTA_CN',
-        'NU_NOTA_CH',
-        'NU_NOTA_LC',
-        'NU_NOTA_MT',
-        'NU_NOTA_REDACAO',
-        'NU_NOTA_MEDIA',
-    ]
-
-    df = part_5()
-    assert (df[columns].dtypes == float).all()
-    assert (~df[columns].isnull()).all().all()
-
-def test_part_6():
-    assert part_6().dtype == int
-```
-
-Exemplo do arquivo main.py:
+func Test10MaioresEstadosDoBrasil(t *testing.T) {
+	estados, err := os10maioresEstadosDoBrasil()
+	assert.Nil(t, err)
+	assert.Equal(t, 10, len(estados))
+}
 
 ```
-def part_1():
-    pass
-
-def part_2():
-    pass
-
-def part_3():
-    pass
-
-def part_4():
-    pass
-
-def part_5():
-    pass
-
-def part_6():
-    pass
-
-def part_7():
-    pass
-
-def part_8():
-    pass
-
-def part_9():
-    pass
-
-def part_10():
-    pass
-
-```
-
 
 ### O cálculo da nota
 
-Quando o desenvolvedor entender que sua solução está pronta ele pode submetê-la para avaliação. Para isso ele executa o comando  do codenation-cli (link para o video) e um arquivo de testes especial é executado para que a nota seja calculada. A ideia é que o desenvolvedor não possa ver este arquivo, ele é executado apenas no momento da submissão e possui testes mais avançados, para validarmos o conhecimento. Exemplo de um arquivo de testes para este fim:
+Quando o desenvolvedor entender que sua solução está pronta ele pode submetê-la para avaliação. Para isso ele executa o comando  do codenation-cli (link para o video) e um arquivo de testes especial é executado para que a nota seja calculada. A ideia é que o desenvolvedor não possa ver este arquivo, ele é executado apenas no momento da submissão e possui testes mais avançados, para validarmos o conhecimento. Exemplo de um arquivo de testes para este fim, o submit_test.go:
 
 ```
-import pandas as pd
-from main import (
-    part_1,
-    part_2,
-    part_3,
-    part_4,
-    part_5,
-    part_6
+package main
+
+import (
+	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
-
-eq = lambda x: lambda y: x == y
-
-train = pd.read_csv("train.csv", dtype=str)
-
-def test_part_1():
-    assert (
-        train
-        .head(2)
-        [["NU_INSCRICAO", "NU_IDADE"]]
-        .pipe(eq(part_1()))
-        .all()
-        .all()
-    )
-
-def test_part_2():
-    assert (
-        train
-        ["NU_IDADE"]
-        .astype(int)
-        .mean()
-        == part_2()
-    )
-
-def test_part_3():
-    assert (
-        train
-        ["NU_IDADE"]
-        .astype(int)
-        .pipe(lambda s: (s - s.mean())/s.std())
-        .pipe(eq(part_3()))
-        .all()
-    )
-
-def test_part_4():
-    assert (
-        train
-        .astype({
-            "NU_NOTA_MT": float
-        })
-        .groupby("NO_MUNICIPIO_ESC")
-        ["NU_NOTA_MT"]
-        .mean()
-        .nlargest(10)
-        .pipe(eq(part_4()))
-        .all()
-    )
-
-def test_part_5():
-    columns = [
-        'NU_NOTA_CN',
-        'NU_NOTA_CH',
-        'NU_NOTA_LC',
-        'NU_NOTA_MT',
-        'NU_NOTA_REDACAO'
-    ]
-
-    assert (
-        train
-        .astype({c:float for c in columns})
-        .fillna(0)
-        .assign(NU_NOTA_MEDIA=lambda df: df[columns].mean(axis=1))
-        .pipe(eq(part_5()))
-        .all()
-        .all()
-    )
-
-def test_part_6():
-    assert (
-        train
-        .groupby("NU_IDADE")
-        .size()
-        .pipe(eq(part_6()))
-        .all()
-    )    
+func TestSubmit10MaioresEstadosDoBrasil(t *testing.T) {
+	estados, err := os10maioresEstadosDoBrasil()
+	assert.Nil(t, err)
+	assert.Equal(t, 10, len(estados))
+	expected := []string{"Amazonas", "Pará", "Mato Grosso", "Minas Gerais", "Bahia", "Mato Grosso do Sul", "Goiás", "Maranhão", "Rio Grande do Sul", "Tocantins"}
+	assert.Equal(t, expected, estados)
+}
+   
 ```
     
-Enquanto o primeiro teste possui asserts mais simples (por exemplo: o resultado deve ser uma lista de strings) neste caso temos asserts mais complexas (por exemplo: o resultado deve ser uma lista de strings cujo primeiro item tenha o valor XYZ).
+Enquanto o primeiro teste possui asserts mais simples (por exemplo: o resultado deve ser uma lista de strings de tamanho 10) neste caso temos asserts mais complexas (por exemplo: o resultado deve ser uma lista de strings cujo primeiro item tenha o valor Amazonas).
 
 ### Os conteúdos
 
@@ -249,10 +128,6 @@ Develop a good working knowledge of Linux using both the graphical interface and
 An Introduction to API’s
 https://restful.io/an-introduction-to-api-s-cee90581ca1b
 An Introduction to API’s
-
-Pandas From The Ground Up
-https://github.com/brandon-rhodes/pycon-pandas-tutorial
-The typical Pandas user learns one dataframe method at a time, slowly scraping features together through trial and error until they can solve the task in front of them. In this tutorial you will re-learn how to think about dataframes from the ground up, and discover how to select intelligently from their abilities to solve your data processing problems through direct and deliberately-chosen steps
 
 ```
 
