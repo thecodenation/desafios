@@ -40,11 +40,13 @@ Para este desafio você precisará do Go versão 1.9 (ou superior) e o gerenciad
 
 ```
 
+OBS: este conteúdo vai ser salvo no arquivo _README.md_, então é possível usar markdown.
+
 ### O teste
 
 Um dos tópicos mais importantes que o(a) desenvolvedor(a) precisa internalizar é o conceito de  *TDD* (*Test Driven Development*) - a abordagem da Code:Nation é fortemente baseada nesta crença.
 
-Quando o(a) desenvolvedor(a) inicia o desafio utilizando o codenation-cli (link para o vídeo explicando como usar), recebe na sua máquina um diretório com uma estrutura similar a:
+Quando o(a) desenvolvedor(a) inicia o desafio utilizando o [codenation-cli](https://www.youtube.com/watch?v=Bmwpq8cjXso), recebe na sua máquina um diretório com uma estrutura similar a:
 
 ```
 README.md: detalhes sobre o desafio e o que você precisa instalar na sua máquina para o desenvolvimento
@@ -52,7 +54,7 @@ main.go: é neste arquivo que você deve ser resolvido o desafio
 main_test.go: testes unitários para auxiliá-lo no desenvolvimento. Este arquivo não deve ser alterado!
 ```
 
-O exemplo acima mostra os arquivos de um desafio na linguagem *Go*, mas o mesmo conceito é aplicado a qualquer ambiente: uma suite de testes que o desenvolvedor usará para guiar seu desenvolvimento. Neste caso, o main.go é um "esqueleto" que o desenvolvedor usará para desenvolver.
+O exemplo acima mostra os arquivos de um desafio na linguagem *Go*, mas o mesmo conceito é aplicado a qualquer ambiente: uma suite de testes que o desenvolvedor usará para guiar seu desenvolvimento. Neste caso, o _main.go_ é um "esqueleto" que o desenvolvedor usará para desenvolver.
 
 Exemplo do esqueleto *main.go*:
 
@@ -95,7 +97,7 @@ func Test10MaioresEstadosDoBrasil(t *testing.T) {
 
 ### O cálculo da nota
 
-Quando o(a) desenvolvedor(a) entender que sua solução está pronta poderá submetê-la para avaliação. Para isso, executará o comando do codenation-cli (link para o video) e um arquivo de testes especial é executado para que a nota seja calculada. A ideia é que o(a) desenvolvedor(a) não possa ver este arquivo - ele é executado apenas no momento da submissão e possui testes mais avançados para validarmos seu conhecimento. Exemplo de um arquivo de testes para este fim, o *submit_test.go*:
+Quando o(a) desenvolvedor(a) entender que sua solução está pronta poderá submetê-la para avaliação. Para isso, executará o comando do [codenation-cli](https://www.youtube.com/watch?v=Bmwpq8cjXso) e um arquivo de testes especial é executado para que a nota seja calculada. A ideia é que o(a) desenvolvedor(a) não possa ver este arquivo - ele é executado apenas no momento da submissão e possui testes mais avançados para validarmos seu conhecimento. Exemplo de um arquivo de testes para este fim, o *submit_test.go*:
 
 ```go
 package main
@@ -117,6 +119,14 @@ func TestSubmit10MaioresEstadosDoBrasil(t *testing.T) {
 ```
     
 Enquanto o primeiro teste possui *asserts* mais simples (por exemplo: o resultado deve ser uma lista de strings de tamanho 10) neste caso temos *asserts* mais complexos (por exemplo: o resultado deve ser uma lista de strings cujo primeiro item tenha o valor Amazonas).
+
+Caso o cálculo da nota precise ser realizado de uma maneira mais complexa do que testes unitários, como no exemplo acima, basta que o arquivo faça o processamento e imprima na saída padrão a nota no formato:
+
+```json
+{"score": 99.5}
+```
+
+O valor do _score_ deve ser entre 0 e 100
 
 ### Os conteúdos
 
@@ -141,7 +151,7 @@ Para facilitar o processo de criação de desafios nós criamos um [repositório
 
 Se você tem interesse em nos ajudar com a criação de templates basta abrir uma *issue/pull request* no [repositório de templates](https://github.com/thecodenation/desafios/tree/master/templates).
 
-E, caso queira criar um desafio entre em contato conosco pelo e-mail (link) ou Twitter/Facebook/Linkedin.
+E, caso queira criar um desafio entre em contato conosco pelo e-mail _elton.minetto@codenation.com.br_ ou [Twitter](http://twitter.com/CodeNationBr)/[Facebook](https://www.facebook.com/CodenationFL)/[Linkedin](https://www.linkedin.com/company/code-nation).
 
 
 
