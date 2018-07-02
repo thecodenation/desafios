@@ -2,6 +2,12 @@
 
 Listar os dez maiores estados brasileiros em extensão territorial
 
+## Tópicos
+
+Neste desafio você vai aprender:
+
+- Golang
+
 ## Suite de testes para aprendizado
 
 Arquivo
