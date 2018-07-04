@@ -6,26 +6,14 @@ Listar os dez maiores estados brasileiros em extensão territorial
 
 Neste desafio você vai aprender:
 
-- Golang
+- Go
+- Testes unitários
 
-## Suite de testes para aprendizado
+## Requisitos
+​
+Para este desafio você precisará do Go versão 1.9 (ou superior) e o gerenciador de dependências dep. Para instalar as dependências, você pode utilizar os comandos abaixo:
+​
+    go get -u github.com/golang/dep/cmd/dep
+    cd ~/codenation/go-0
+    dep ensure
 
-Arquivo
-    
-    main_test.go
-
-Comando 
-
-    go get -u github.com/golang/dep/cmd/dep; dep ensure; go test
-
-## Suite de testes para avaliação
-
-Arquivo
-
-    submit_test.go
-
-Comando
-
-    go get -u github.com/golang/dep/cmd/dep; dep ensure; go get -u github.com/jstemmer/go-junit-report ; go test -v | go-junit-report > output.xml
-
-**OBS:** é necessário a geração do arquivo output.xml pois este será analisado durante o processo de avaliação

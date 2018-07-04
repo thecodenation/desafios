@@ -1,0 +1,39 @@
+{
+    "name": "Teste básico de Python3",
+    "description": "Listar os dez maiores estados brasileiros em extensão territorial",
+    "slug": "python-1",
+    "topic": [
+        "Go",
+        "Testes unitários"
+    ],
+    "test_cmd": "python -m pytest --verbose -vv --cache-clear --tb=line test_main.py",
+    "submission_cmd": "python -m pytest --verbose -vv --show-capture=all --tb=line --junit-xml=output.xml test_submit.py > output.xml",
+    "submission_files":[
+        "main.py",
+        "test_main.py",
+        "test_submit.py",
+        "output.xml"
+    ],
+    "created_by": [
+        {
+            "name": "Code:Nation",
+            "picture": "https://www.codenation.com.br/image/ta-cn-symbol@3x.png",
+            "email": "atendimento@codenation.com.br",
+            "linkedin": "https://www.linkedin.com/company/code-nation/",
+            "github": "http://github.com/thecodenation",
+            "site": "https://www.codenation.com.br"
+        }
+    ],
+    "content": [
+        {
+            "name": "An Introduction to Python",
+            "description": "This is a simple book to learn Python programming language, it is for the programmers who are new to Python.",
+            "url": "http://pymbook.readthedocs.io/en/latest/"
+        },
+        {
+            "name": "Testing Your Code",
+            "description": "Testing Your Code",
+            "url": "http://docs.python-guide.org/en/latest/writing/tests/"
+        }
+    ]
+}

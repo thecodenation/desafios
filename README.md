@@ -33,7 +33,8 @@ Listar os dez maiores estados brasileiros em extensão territorial
 
 Neste desafio você vai aprender:
 
-- Golang
+- Go
+- Testes unitários
 
 ## Requisitos
 
@@ -136,22 +137,71 @@ O valor do _score_ deve ser entre 0 e 100
 
 ### Os conteúdos
 
-Um dos maiores desafios de um iniciante é conseguir fazer o filtro da enorme quantidade de conteúdo existente e identificar o que é relevante. Para resolvermos este problema sempre elencamos uma lista de posts, livros, documentações, videos, entre outros materiais, que ajudarão o(a) desenvolvedor(a) a resolver o desafio. Exemplos:
-
-```
-Introduction to Linux
-https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-1
-Develop a good working knowledge of Linux using both the graphical interface and command line, covering the major Linux distribution families
-
-An Introduction to API’s
-https://restful.io/an-introduction-to-api-s-cee90581ca1b
-An Introduction to API’s
-
-```
+Um dos maiores desafios de um iniciante é conseguir fazer o filtro da enorme quantidade de conteúdo existente e identificar o que é relevante. Para resolvermos este problema sempre elencamos uma lista de posts, livros, documentações, videos, entre outros materiais, que ajudarão o(a) desenvolvedor(a) a resolver o desafio. 
 
 ### O template
 
 Para facilitar o processo de criação de desafios nós criamos um [repositório no Github](https://github.com/thecodenation/desafios/tree/master/templates) com templates para as principais linguagens de programação. O repositório é *open source*, por isso você pode colaborar com novos templates.
+
+#### O arquivo challenge.json
+
+O arquivo _challenge.json_ é os metadados do desafio. Nele constam os detalhes como os comandos que serão executados, os arquivos que serão enviados para a API no momento da submissão e os conteúdos indicados. Exemplo:
+
+```json
+{
+    "name": "Teste básico de Golang",
+    "description": "Listar os dez maiores estados brasileiros em extensão territorial",
+    "slug": "go-0",
+    "test_cmd": "go get -u github.com/golang/dep/cmd/dep; dep ensure; go test",
+    "submission_files":[
+        "main.go",
+        "main_test.go",
+        "submit_test.go",
+        "output.xml"
+    ],
+    "topic":["Go", "Testes unitários"],
+    "submission_cmd":"go get -u github.com/golang/dep/cmd/dep; dep ensure; go get -u github.com/jstemmer/go-junit-report ; go test -v | go-junit-report > output.xml",
+    "created_by": [
+        {
+            "name": "Code:Nation",
+            "picture": "https://www.codenation.com.br/image/ta-cn-symbol@3x.png",
+            "email": "atendimento@codenation.com.br",
+            "linkedin": "https://www.linkedin.com/company/code-nation/",
+            "github": "http://github.com/thecodenation",
+            "site": "https://www.codenation.com.br"
+        }
+    ],
+    "content": [
+        {
+            "name": "The Go Programming Language",
+            "description": "Documentation - The Go Programming Language",
+            "url": "https://golang.org/doc/"
+        },
+        {
+            "name": "A Tour of Go",
+            "description": "A Tour of Go",
+            "url": "https://tour.golang.org/welcome/1"
+        },
+        {
+            "name": "Go by Example",
+            "description": "Go by Example is a hands-on introduction to Go using annotated example programs",
+            "url": "https://gobyexample.com/"
+        },
+        {
+            "name": "stretchr/testify",
+            "description": "A toolkit with common assertions and mocks that plays nicely with the standard library",
+            "url": "https://github.com/stretchr/testify"
+        },
+        {
+            "name": "A Linguagem de Programação Go - Novatec Editora",
+            "description": "Este livro é uma referência definitiva para programadores que queiram conhecer a linguagem Go",
+            "url": "https://novatec.com.br/livros/linguagem-de-programacao-go/"
+        }
+    ]
+}
+```
+
+**OBS:** no campo *submission_cmd* é necessário que o comando gere o arquivo _output.xml_ pois este será analisado durante o processo de avaliação, caso a nota seja calculada de acordo com os testes unitários.
 
 ## Como começar?  
 
