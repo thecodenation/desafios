@@ -47,7 +47,7 @@ Para este desafio você precisará do Go versão 1.9 (ou superior) e o gerenciad
 
 ```
 
-OBS: este conteúdo vai ser salvo no arquivo _README.md_, então é possível usar markdown.
+OBS: este conteúdo vai ser salvo no arquivo *test_files/README.md*, então é possível usar markdown.
 
 ### O teste
 
@@ -61,9 +61,9 @@ main.go: é neste arquivo que você deve ser resolvido o desafio
 main_test.go: testes unitários para auxiliá-lo no desenvolvimento. Este arquivo não deve ser alterado!
 ```
 
-O exemplo acima mostra os arquivos de um desafio na linguagem *Go*, mas o mesmo conceito é aplicado a qualquer ambiente: uma suite de testes que o desenvolvedor usará para guiar seu desenvolvimento. Neste caso, o _main.go_ é um "esqueleto" que o desenvolvedor usará para desenvolver.
+O exemplo acima mostra os arquivos de um desafio na linguagem *Go*, mas o mesmo conceito é aplicado a qualquer ambiente: uma suite de testes que o desenvolvedor usará para guiar seu desenvolvimento. Neste caso, o *test_files/main.go* é um "esqueleto" que o desenvolvedor usará para desenvolver.
 
-Exemplo do esqueleto *main.go*:
+Exemplo do esqueleto *test_files/main.go*:
 
 ```go
 package main
@@ -83,7 +83,7 @@ func os10maioresEstadosDoBrasil() ([]string, error) {
 
 ```
 
-Exemplo do conteúdo do arquivo de testes, o *main_test.go*:
+Exemplo do conteúdo do arquivo de testes, o *test_files/main_test.go*:
 
 ```go
 package main
@@ -104,7 +104,7 @@ func Test10MaioresEstadosDoBrasil(t *testing.T) {
 
 ### O cálculo da nota
 
-Quando o(a) desenvolvedor(a) entender que sua solução está pronta poderá submetê-la para avaliação. Para isso, executará o comando do [codenation-cli](https://www.youtube.com/watch?v=Bmwpq8cjXso) e um arquivo de testes especial é executado para que a nota seja calculada. A ideia é que o(a) desenvolvedor(a) não possa ver este arquivo - ele é executado apenas no momento da submissão e possui testes mais avançados para validarmos seu conhecimento. Exemplo de um arquivo de testes para este fim, o *submit_test.go*:
+Quando o(a) desenvolvedor(a) entender que sua solução está pronta poderá submetê-la para avaliação. Para isso, executará o comando do [codenation-cli](https://www.youtube.com/watch?v=Bmwpq8cjXso) e um arquivo de testes especial é executado para que a nota seja calculada. A ideia é que o(a) desenvolvedor(a) não possa ver este arquivo - ele é executado apenas no momento da submissão e possui testes mais avançados para validarmos seu conhecimento. Exemplo de um arquivo de testes para este fim, o *submission_files/submit_test.go*:
 
 ```go
 package main
