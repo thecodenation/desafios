@@ -37,12 +37,12 @@ Neste desafio você vai aprender:
 - Testes unitários
 
 ## Requisitos
+​
+Para este desafio você precisará do Go versão 1.9 (ou superior). Para realizar os testes locais basta executar os comandos abaixo:
+​
 
-Para este desafio você precisará do Go versão 1.9 (ou superior) e o gerenciador de dependências dep. Para instalar as dependências, você pode utilizar os comandos abaixo:
-
-    go get -u github.com/golang/dep/cmd/dep
-    cd ~/codenation/golang-1
-    dep ensure
+    cd ~/codenation/go-0
+    codenation test -c go-0
 
 
 ```
@@ -151,16 +151,20 @@ O arquivo _challenge.json_ é os metadados do desafio. Nele constam os detalhes 
 {
     "name": "Teste básico de Golang",
     "description": "Listar os dez maiores estados brasileiros em extensão territorial",
+    "topic":["Go", "Testes unitários"],
     "slug": "go-0",
-    "test_cmd": "go get -u github.com/golang/dep/cmd/dep; dep ensure; go test",
+    "test_cmd": "go get -u github.com/stretchr/testify/assert; go test",
     "submission_files":[
         "main.go",
         "main_test.go",
         "submit_test.go",
         "output.xml"
     ],
-    "topic":["Go", "Testes unitários"],
-    "submission_cmd":"go get -u github.com/golang/dep/cmd/dep; dep ensure; go get -u github.com/jstemmer/go-junit-report ; go test -v | go-junit-report > output.xml",
+    "private_files": [
+        "submit_test.go",
+        "output.xml"
+    ],
+    "submission_cmd":"go get -u github.com/jstemmer/go-junit-report ; go test -v | go-junit-report > output.xml",
     "created_by": [
         {
             "name": "Code:Nation",
@@ -201,7 +205,11 @@ O arquivo _challenge.json_ é os metadados do desafio. Nele constam os detalhes 
 }
 ```
 
-**OBS:** no campo *submission_cmd* é necessário que o comando gere o arquivo _output.xml_ pois este será analisado durante o processo de avaliação, caso a nota seja calculada de acordo com os testes unitários.
+**OBS:** 
+
+- no campo *submission_cmd* é necessário que o comando gere o arquivo _output.xml_ pois este será analisado durante o processo de avaliação, caso a nota seja calculada de acordo com os testes unitários.
+
+- no campo *private_files* é necessário indicar quais arquivos serão excluídos da máquina do desenvolvedor após a correção e submissão para a API. Estes arquivos geralmente são usados apenas para o cálculo da nota e depois apagados, para garantir a lisura do processo.
 
 ## Como começar?  
 

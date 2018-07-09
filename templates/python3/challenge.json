@@ -14,6 +14,10 @@
         "test_submit.py",
         "output.xml"
     ],
+    "private_files": [
+        "test_submit.py",
+        "output.xml"
+    ],
     "created_by": [
         {
             "name": "Code:Nation",

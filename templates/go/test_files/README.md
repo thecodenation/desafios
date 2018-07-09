@@ -11,10 +11,8 @@ Neste desafio você vai aprender:
 
 ## Requisitos
 ​
-Para este desafio você precisará do Go versão 1.9 (ou superior) e o gerenciador de dependências dep. Para instalar as dependências, você pode utilizar os comandos abaixo:
+Para este desafio você precisará do Go versão 1.9 (ou superior). Para realizar os testes locais basta executar os comandos abaixo:
 ​
 
-    go get -u github.com/golang/dep/cmd/dep
     cd ~/codenation/go-0
-    dep ensure
-
+    codenation test -c go-0
