@@ -145,7 +145,7 @@ Para facilitar o processo de criação de desafios nós criamos um [repositório
 
 #### O arquivo challenge.json
 
-O arquivo _challenge.json_ é os metadados do desafio. Nele constam os detalhes como os comandos que serão executados, os arquivos que serão enviados para a API no momento da submissão e os conteúdos indicados. Exemplo:
+No arquivo _challenge.json_ constam os metadados do desafio. Nele estão os detalhes como os comandos que serão executados, os arquivos que serão enviados para a API no momento da submissão e os conteúdos indicados. Exemplo:
 
 ```json
 {
@@ -206,6 +206,8 @@ O arquivo _challenge.json_ é os metadados do desafio. Nele constam os detalhes 
 ```
 
 **OBS:** 
+
+- no campo *test_cmd* indicamos o comando que será executado na máquina do desenvolvedor para que ele possa validar o seu código com os testes unitários fornecidos
 
 - no campo *submission_cmd* é necessário que o comando gere o arquivo _output.xml_ pois este será analisado durante o processo de avaliação, caso a nota seja calculada de acordo com os testes unitários.
 
