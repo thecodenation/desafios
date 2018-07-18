@@ -6,8 +6,12 @@
         "Go",
         "Testes unitários"
     ],
-    "test_cmd": "python -m pytest --verbose -vv --cache-clear --tb=line test_main.py",
-    "submission_cmd": "python -m pytest --verbose -vv --show-capture=all --tb=line --junit-xml=output.xml test_submit.py > output.xml",
+    "test_cmd": [
+        "python -m pytest --verbose -vv --cache-clear --tb=line test_main.py"
+    ],
+    "submission_cmd": [
+        "python -m pytest --verbose -vv --show-capture=all --tb=line --junit-xml=output.xml test_submit.py > output.xml"
+    ],
     "submission_files":[
         "main.py",
         "test_main.py",
@@ -15,8 +19,7 @@
         "output.xml"
     ],
     "private_files": [
-        "test_submit.py",
-        "output.xml"
+        "test_submit.py"
     ],
     "created_by": [
         {

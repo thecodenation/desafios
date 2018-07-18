@@ -153,7 +153,10 @@ No arquivo _challenge.json_ constam os metadados do desafio. Nele estão os deta
     "description": "Listar os dez maiores estados brasileiros em extensão territorial",
     "topic":["Go", "Testes unitários"],
     "slug": "go-0",
-    "test_cmd": "go get -u github.com/stretchr/testify/assert; go test",
+    "test_cmd": [
+        "go get -u github.com/stretchr/testify/assert",
+        "go test"
+    ],
     "submission_files":[
         "main.go",
         "main_test.go",
@@ -161,10 +164,12 @@ No arquivo _challenge.json_ constam os metadados do desafio. Nele estão os deta
         "output.xml"
     ],
     "private_files": [
-        "submit_test.go",
-        "output.xml"
+        "submit_test.go"
     ],
-    "submission_cmd":"go get -u github.com/jstemmer/go-junit-report ; go test -v | go-junit-report > output.xml",
+    "submission_cmd": [
+        "go get -u github.com/jstemmer/go-junit-report",
+        "go test -v | go-junit-report > output.xml"
+    ],
     "created_by": [
         {
             "name": "Code:Nation",
