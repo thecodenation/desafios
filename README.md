@@ -157,6 +157,7 @@ No arquivo _challenge.json_ constam os metadados do desafio. Nele estão os deta
         "go get -u github.com/stretchr/testify/assert",
         "go test"
     ],
+    "test_results_files": ["output.xml"],
     "submission_files":[
         "main.go",
         "main_test.go",
@@ -214,9 +215,11 @@ No arquivo _challenge.json_ constam os metadados do desafio. Nele estão os deta
 
 - no campo *test_cmd* indicamos o comando que será executado na máquina do desenvolvedor para que ele possa validar o seu código com os testes unitários fornecidos
 
-- no campo *submission_cmd* é necessário que o comando gere o arquivo _output.xml_ pois este será analisado durante o processo de avaliação, caso a nota seja calculada de acordo com os testes unitários.
+- no campo *submission_cmd* é necessário que o comando gere o arquivo _output.xml_, conforme indicado no campo *test_results_files*, pois este será analisado durante o processo de avaliação, caso a nota seja calculada de acordo com os testes unitários.
 
 - no campo *private_files* é necessário indicar quais arquivos serão excluídos da máquina do desenvolvedor após a correção e submissão para a API. Estes arquivos geralmente são usados apenas para o cálculo da nota e depois apagados, para garantir a lisura do processo.
+
+- no campo *test_results_files* indicamos qual é o nome dos arquivos que armazenam o resultado dos testes, a serem processados para o cálculo da nota. Caso a nota seja calculada por outro algoritmo este campo não é necessário
 
 ## Como começar?  
 

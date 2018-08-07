@@ -10,6 +10,9 @@
         "go get -u github.com/stretchr/testify/assert",
         "go test"
     ],
+    "test_results_files": [
+        "output.xml"
+    ],
     "submission_files":[
         "main.go",
         "main_test.go",

@@ -9,6 +9,9 @@
     "test_cmd": [
         "python -m pytest --verbose -vv --cache-clear --tb=line test_main.py"
     ],
+    "test_results_files": [
+        "output.xml"
+    ],
     "submission_cmd": [
         "python -m pytest --verbose -vv --show-capture=all --tb=line --junit-xml=output.xml test_submit.py > output.xml"
     ],
