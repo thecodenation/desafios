@@ -137,7 +137,7 @@ O valor do _score_ deve ser entre 0 e 100
 
 ### Os conteúdos
 
-Um dos maiores desafios de um iniciante é conseguir fazer o filtro da enorme quantidade de conteúdo existente e identificar o que é relevante. Para resolvermos este problema sempre elencamos uma lista de posts, livros, documentações, videos, entre outros materiais, que ajudarão o(a) desenvolvedor(a) a resolver o desafio. 
+Um dos maiores desafios de um iniciante é conseguir fazer o filtro da enorme quantidade de conteúdo existente e identificar o que é relevante. Para resolvermos este problema sempre elencamos uma lista de posts, livros, documentações, videos, entre outros materiais, que ajudarão o(a) desenvolvedor(a) a resolver o desafio.
 
 ### O template
 
@@ -220,6 +220,8 @@ No arquivo _challenge.json_ constam os metadados do desafio. Nele estão os deta
 - no campo *private_files* é necessário indicar quais arquivos serão excluídos da máquina do desenvolvedor após a correção e submissão para a API. Estes arquivos geralmente são usados apenas para o cálculo da nota e depois apagados, para garantir a lisura do processo.
 
 - no campo *test_results_files* indicamos qual é o nome dos arquivos que armazenam o resultado dos testes, a serem processados para o cálculo da nota. Caso a nota seja calculada por outro algoritmo este campo não é necessário
+
+- no campo *content* indicamos os conteúdos relacionados ao desafio.
 
 ## Como começar?  
 
